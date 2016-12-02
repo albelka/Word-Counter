@@ -1,19 +1,21 @@
 using Xunit;
 using System;
 using System.Collections.Generic;
-using TEMPLATE.Objects;
 
-namespace  TEMPLATE
+namespace  WordCounter.Objects
 {
-  public class TEMPLATE
+  public class CountRepeatsTest
   {
     [Fact]
     public void HelperToCountRepeats_CompareTwoWords_true()
     {
       //Arrange
+      string sentence = "hello";
+      string word = "hello";
+      RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, TEMPLATE);
+      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
     }
   }
 }
