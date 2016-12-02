@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Collections.Generic;
 
 namespace WordCounter.Objects
@@ -14,11 +15,27 @@ namespace WordCounter.Objects
       this.Word = word;
     }
 
+    public static string TrimPunctuation(string sentence)
+    {
+      StringBuilder myStringBuilder = new StringBuilder();
+      foreach (char c in sentence)
+      {
+        if (!char.IsPunctuation(c))
+          myStringBuilder.Append(c);
+      }
+      string newString = myStringBuilder.ToString();
+      return newString;
+    }
+
     public bool CompareTwoWords()
     {
       string sentenceLower = this.Sentence.ToLower();
       string wordLower = this.Word.ToLower();
-      
+      sentenceLower = TrimPunctuation(sentenceLower);
+      wordLower = TrimPunctuation(wordLower);
+      Console.WriteLine(wordLower);
+      Console.WriteLine(sentenceLower);
+
       if(sentenceLower == wordLower)
       {
         return true;

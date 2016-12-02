@@ -18,11 +18,11 @@
 * Input: "Hello," "hello"
 * Output: true
 
-* Behavior: The program can compare each word in an inputted sentence to an inputted word to see if they are the     same.
+* Behavior: The program can compare each word in an inputted sentence to an inputted word to see if they are the same.
 * Input: "Hello, you!", "hello"
 * Output: true
 
-* Behavior: The program can compare each word in an inputted sentence to an inputted word to see if they are the     same and return how frequently the word appears.
+* Behavior: The program can compare each word in an inputted sentence to an inputted word to see if they are the same and return how frequently the word appears.
 * Input: "Hello, you! I love to say hello to friends!", "hello"
 * Output: 2
 
@@ -32,7 +32,7 @@
 * Navigate to the project directory in the terminal.
 * Use the command > dnu restore to download any necessary dependencies.
 * Use the command > dnx kestrel to run the project on the local server.
-* Navigate to localhost:5004 in your browser to view the app
+* Navigate to localhost:5004 in your browser to view the app.
 
 ### License
 
