@@ -47,9 +47,23 @@ namespace WordCounter.Objects
 
 
 
-    public int CountRepeats(string sentence, string word)
+    public int CountRepeats()
     {
-      return 0;
+      string sentenceLower = this.Sentence.ToLower();
+      string wordLower = this.Word.ToLower();
+      int count = 0;
+      sentenceLower = TrimPunctuation(sentenceLower);
+      wordLower = TrimPunctuation(wordLower);
+      Console.WriteLine(wordLower);
+      Console.WriteLine(sentenceLower);
+      string[] sentenceArray = sentenceLower.Split(' ');
+
+      foreach(string word in sentenceArray)
+      if(word == wordLower)
+      {
+        count ++;
+      }
+      return count;
     }
   }
 }

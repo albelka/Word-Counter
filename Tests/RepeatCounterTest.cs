@@ -50,5 +50,16 @@ namespace  WordCounter.Objects
       //Assert
       Assert.Equal(true, newRepeatCounter.Compare());
     }
+    [Fact]
+    public void CountRepeats_FindWordInSentence_number()
+    {
+      //Arrange
+      string sentence = "Hello, you! I love to say hello to friends!";
+      string word = "hello";
+      RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
+      //Act
+      //Assert
+      Assert.Equal(2, newRepeatCounter.CountRepeats());
+    }
   }
 }
