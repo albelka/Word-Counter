@@ -15,7 +15,7 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
+      Assert.Equal(true, newRepeatCounter.Compare());
     }
     [Fact]
     public void HelperToCountRepeats_CompareTwoWordsCaseInsensitive_true()
@@ -26,7 +26,7 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
+      Assert.Equal(true, newRepeatCounter.Compare());
     }
     [Fact]
     public void HelperToCountRepeats_CompareTwoWordsPunctuation_true()
@@ -37,7 +37,7 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
+      Assert.Equal(true, newRepeatCounter.Compare());
     }
     [Fact]
     public void HelperToCountRepeats_FindWordInSentence_true()
@@ -48,7 +48,7 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
+      Assert.Equal(true, newRepeatCounter.Compare());
     }
   }
 }

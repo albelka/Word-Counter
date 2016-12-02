@@ -27,7 +27,7 @@ namespace WordCounter.Objects
       return newString;
     }
 
-    public bool CompareTwoWords()
+    public bool Compare()
     {
       string sentenceLower = this.Sentence.ToLower();
       string wordLower = this.Word.ToLower();
@@ -35,13 +35,17 @@ namespace WordCounter.Objects
       wordLower = TrimPunctuation(wordLower);
       Console.WriteLine(wordLower);
       Console.WriteLine(sentenceLower);
+      string[] sentenceArray = sentenceLower.Split(' ');
 
-      if(sentenceLower == wordLower)
+      foreach(string word in sentenceArray)
+      if(word == wordLower)
       {
         return true;
       }
       return false;
     }
+
+
 
     public int CountRepeats(string sentence, string word)
     {
