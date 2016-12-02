@@ -17,5 +17,16 @@ namespace  WordCounter.Objects
       //Assert
       Assert.Equal(true, newRepeatCounter.CompareTwoWords());
     }
+    [Fact]
+    public void HelperToCountRepeats_CompareTwoWordsCaseInsensitive_true()
+    {
+      //Arrange
+      string sentence = "hello";
+      string word = "Hello";
+      RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
+      //Act
+      //Assert
+      Assert.Equal(true, newRepeatCounter.CompareTwoWords());
+    }
   }
 }

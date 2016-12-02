@@ -16,7 +16,10 @@ namespace WordCounter.Objects
 
     public bool CompareTwoWords()
     {
-      if(this.Sentence == this.Word)
+      string sentenceLower = this.Sentence.ToLower();
+      string wordLower = this.Word.ToLower();
+      
+      if(sentenceLower == wordLower)
       {
         return true;
       }
