@@ -1,0 +1,23 @@
+.jumbotron {
+  text-align: center;
+  background-color: #e6ffcc;
+  background-image: url("../Content/images/background.css");
+}
+.link {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+body {
+  background-color: #cce6ff;
+}
+form{
+  text-align: center;
+}
+.wordInput {
+  margin-right: 100px;
+}
+img {
+  height: 300px;
+}

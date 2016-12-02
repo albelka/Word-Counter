@@ -7,22 +7,23 @@
   </head>
   <body>
     <div class="jumbotron">
+      <img src="/../Content/css/images/cat.png" alt="a picture of a cat">
       <h1>Word Counter</h1>
     </div>
     <div class="container">
-      <h2>You can find out how many times a given word appears in your sentence.</h2><br>
+      <h2>Find out how many times a given word appears in your sentence.</h2><br>
 
         <form action="/sentence" method="post">
           <div class="form-group">
             <label for="sentence">Enter a sentence to search:</label>
-            <input type="text" name="sentence">
+            <input type="text" class="form-control" name="sentence">
           </div>
           <div class="form-group">
             <label for="word">Enter a word:</label>
-            <input type="text" name="word">
+            <input type="text"  name="word" class="wordInput">
           </div>
 
-            <button type="submit">SUBMIT</button>
+            <button type="submit" class="btn btn-success">SUBMIT</button>
         </form>
     </div>
   </body>
