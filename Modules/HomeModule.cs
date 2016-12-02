@@ -12,6 +12,9 @@ namespace WordCounter
       Get["/"] = _ => {
         return View["index.cshtml"];
       };
+      Post["/sentence"] = _ => {
+        
+      }
 
     }
   }
