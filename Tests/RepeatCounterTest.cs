@@ -7,7 +7,18 @@ namespace  WordCounter.Objects
   public class CountRepeatsTest
   {
     [Fact]
-    public void HelperToCountRepeats_CompareTwoWords_true()
+    public void CountRepeats_ReturnsFalseWhenWordsAreDifferent_0()
+    {
+      //Arrange
+      string sentence = "hello";
+      string word = "yo";
+      RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
+      //Act
+      //Assert
+      Assert.Equal(0, newRepeatCounter.CountRepeats());
+    }
+    [Fact]
+    public void CountRepeats_CompareTwoWords_1()
     {
       //Arrange
       string sentence = "hello";
@@ -15,10 +26,10 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.Compare());
+      Assert.Equal(1, newRepeatCounter.CountRepeats());
     }
     [Fact]
-    public void HelperToCountRepeats_CompareTwoWordsCaseInsensitive_true()
+    public void CountRepeats_CompareTwoWordsCaseInsensitive_1()
     {
       //Arrange
       string sentence = "Hello";
@@ -26,10 +37,10 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.Compare());
+      Assert.Equal(1, newRepeatCounter.CountRepeats());
     }
     [Fact]
-    public void HelperToCountRepeats_CompareTwoWordsPunctuation_true()
+    public void CountRepeats_CompareTwoWordsPunctuation_1()
     {
       //Arrange
       string sentence = "Hello,";
@@ -37,10 +48,10 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.Compare());
+      Assert.Equal(1, newRepeatCounter.CountRepeats());
     }
     [Fact]
-    public void HelperToCountRepeats_FindWordInSentence_true()
+    public void HelperToCountRepeats_FindWordInSentence_1()
     {
       //Arrange
       string sentence = "Hello, you";
@@ -48,7 +59,7 @@ namespace  WordCounter.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter(sentence, word);
       //Act
       //Assert
-      Assert.Equal(true, newRepeatCounter.Compare());
+      Assert.Equal(1, newRepeatCounter.CountRepeats());
     }
     [Fact]
     public void CountRepeats_FindWordInSentence_number()

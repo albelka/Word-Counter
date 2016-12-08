@@ -33,8 +33,6 @@ namespace WordCounter.Objects
       string wordLower = this.Word.ToLower();
       sentenceLower = TrimPunctuation(sentenceLower);
       wordLower = TrimPunctuation(wordLower);
-      Console.WriteLine(wordLower);
-      Console.WriteLine(sentenceLower);
       string[] sentenceArray = sentenceLower.Split(' ');
 
       foreach(string word in sentenceArray)
