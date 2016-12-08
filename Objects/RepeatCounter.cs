@@ -27,22 +27,6 @@ namespace WordCounter.Objects
       return newString;
     }
 
-    public bool Compare()
-    {
-      string sentenceLower = this.Sentence.ToLower();
-      string wordLower = this.Word.ToLower();
-      sentenceLower = TrimPunctuation(sentenceLower);
-      wordLower = TrimPunctuation(wordLower);
-      string[] sentenceArray = sentenceLower.Split(' ');
-
-      foreach(string word in sentenceArray)
-      if(word == wordLower)
-      {
-        return true;
-      }
-      return false;
-    }
-
     public int CountRepeats()
     {
       string sentenceLower = this.Sentence.ToLower();

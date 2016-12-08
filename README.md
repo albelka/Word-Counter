@@ -6,6 +6,10 @@
 
 ### Specifications
 
+* Behavior: The program can compare two inputted words and determine if they are different.
+* Input: "hello", "yo"
+* Output: false
+
 * Behavior: The program can compare two inputted words and determine if they are the same.
 * Input: "hello", "hello"
 * Output: true

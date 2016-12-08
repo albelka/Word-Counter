@@ -3,6 +3,7 @@
   <head>
     <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../Content/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="../Content/js/scripts.js"></script>
     <title>Word Counter</title>
   </head>
   <body>
@@ -10,7 +11,14 @@
       <h1>Word Counter</h1>
     </div>
     <div class="container">
-      <h2>Your word '@Model.Word ' appeared @Model.CountRepeats() time/s.</h2><br>
+      @if(@Model.CountRepeats() == 1)
+      {
+        @<h2>Your word '@Model.Word ' appeared once.</h2><br>
+      }
+      else
+      {
+        @<h2>Your word '@Model.Word ' appeared @Model.CountRepeats() times.</h2><br>
+      }
       </div><br>
       <div class="link">
       <a href="/">search another sentence</a>

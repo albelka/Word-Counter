@@ -15,7 +15,8 @@ namespace WordCounter
       Post["/sentence"] = _ => {
         string sentence = Request.Form["sentence"];
         string word = Request.Form["word"];
-        if(sentence=="" || word=="")
+        
+        if(sentence =="" || word =="")
         {
           return View["error.cshtml"];
         }
